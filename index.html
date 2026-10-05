@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECHO: THE LAST SIGNAL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="home">
+    <div class="overlay"></div>
+
+    <div class="home-content">
+      <p class="creator">CREATED BY: RAFAEL ALFARIZI</p>
+
+      <h1>ECHO</h1>
+      <h2>THE LAST SIGNAL</h2>
+
+      <button onclick="startGame()">START</button>
+      <button onclick="showCharacter()">CHARACTER</button>
+    </div>
+  </div>
+
+  <div id="character-screen" class="hidden">
+    <h1>CHOOSE YOUR CHARACTER</h1>
+
+    <div class="characters">
+      <div class="character" onclick="selectCharacter('Jeffrey')">
+        <div class="portrait">JEFFREY</div>
+      </div>
+
+      <div class="character" onclick="selectCharacter('Iqbal')">
+        <div class="portrait">IQBAL</div>
+      </div>
+
+      <div class="character" onclick="selectCharacter('Rafael')">
+        <div class="portrait">RAFAEL</div>
+      </div>
+    </div>
+
+    <p id="selected">SELECT A CHARACTER</p>
+
+    <button onclick="startGame()">CONFIRM</button>
+    <button onclick="backHome()">BACK</button>
+  </div>
+
+  <div id="game-screen" class="hidden">
+    <div class="game-ui">
+      <h2>ROOM 01</h2>
+      <p id="clue">
+        Ruangan berikutnya sangat gelap.
+        Kamu membutuhkan sesuatu untuk melihat.
+      </p>
+
+      <p id="status">SEARCH THE CHESTS</p>
+
+      <div class="chests">
+        <button onclick="openChest(0)">CHEST 01</button>
+        <button onclick="openChest(1)">CHEST 02</button>
+        <button onclick="openChest(2)">CHEST 03</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
