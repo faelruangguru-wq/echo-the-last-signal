@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #05070b;
+  color: white;
+  overflow: hidden;
+}
+
+button {
+  border: 1px solid rgba(255,255,255,.3);
+  background: rgba(10,15,25,.8);
+  color: white;
+  padding: 14px 28px;
+  margin: 8px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* HOME */
+
+#home {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, #172033, #03050a 70%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.8)
+  );
+}
+
+.home-content {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.creator {
+  font-size: 11px;
+  letter-spacing: 4px;
+  opacity: .6;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(45px, 10vw, 100px);
+  letter-spacing: 12px;
+}
+
+h2 {
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+/* CHARACTER */
+
+#character-screen {
+  position: fixed;
+  inset: 0;
+  background: #070a10;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px auto 30px;
+  flex-wrap: wrap;
+}
+
+.character {
+  width: 180px;
+  height: 240px;
+  border: 1px solid #394354;
+  background: linear-gradient(145deg, #18202d, #080b11);
+  border-radius: 12px;
+  padding: 10px;
+  transition: .2s;
+}
+
+.character:hover {
+  transform: translateY(-8px);
+  border-color: white;
+}
+
+.portrait {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/* GAME */
+
+#game-screen {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(5,8,13,.3), rgba(5,8,13,.95)),
+    radial-gradient(circle, #263448, #05070b 70%);
+}
+
+.game-ui {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  max-width: 500px;
+}
+
+.game-ui h2 {
+  margin-bottom: 15px;
+}
+
+#clue {
+  padding: 18px;
+  background: rgba(0,0,0,.6);
+  border-left: 3px solid white;
+  line-height: 1.6;
+}
+
+#status {
+  margin-top: 20px;
+  letter-spacing: 3px;
+  opacity: .7;
+}
+
+.chests {
+  margin-top: 30px;
+}
